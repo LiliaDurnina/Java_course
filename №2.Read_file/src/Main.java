@@ -12,6 +12,7 @@ public class Main {
         System.out.println("Введите файл в который хотите выгрузить словарь: ");
         String fileOutput = sc.nextLine();
         System.out.println("file for output: " + fileOutput);
+        sc.close();
 
         dict = dict.dictFromFileToFile(fileInput, fileOutput );
         System.out.println(dict);
