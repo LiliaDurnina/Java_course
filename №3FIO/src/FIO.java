@@ -20,7 +20,7 @@ public class FIO {
     public FIO(String str) throws InvalidInputException, InvalidDateException {
         StringTokenizer st = new StringTokenizer(str, " ");
         if (st.countTokens()!=4){
-            throw new InvalidInputException("Ошибка ввода, неверное количетсво аргументов: "+st.countTokens()+" из 4");
+            throw new InvalidInputException("Error: неверное количество аргументов: "+st.countTokens()+" из 4!");
         }
         Surname = st.nextToken();
         Name = st.nextToken();
@@ -30,11 +30,8 @@ public class FIO {
     }
 
     public void outputInfo() {
-        try {
-            System.out.println(Surname + " " +  Character.toUpperCase(Name.charAt(0)) + "." +  Character.toUpperCase(Patronymic.charAt(0)) + ". " + gender + " " + age+" " + this.forAge());
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        System.out.println(Surname + " " +  Character.toUpperCase(Name.charAt(0)) + "." +  Character.toUpperCase(Patronymic.charAt(0)) + ". " + gender + " " + age+" " + this.forAge());
+
     }
 
 

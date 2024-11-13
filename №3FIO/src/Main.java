@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws InvalidInputException, InvalidDateException {
 
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите в строку через пробелы ФИО на русском языке и дату рождения ");
         String str = sc.nextLine();
@@ -14,10 +13,10 @@ public class Main {
             t.outputInfo();
         }
         catch (InvalidInputException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
         catch (InvalidDateException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
 
 
